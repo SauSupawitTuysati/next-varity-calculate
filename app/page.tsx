@@ -4,16 +4,18 @@ import Image from "next/image";
 import calculater from "./../assets/images/calculater.png";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  // กำหนด state เพื่อเก็บค่า passCode
+  const router = useRouter();
+
   const [passCode, setPassCode] = useState("");
-  const [error, setError] = useState(false); // สถานะสำหรับแสดงข้อความผิดพลาด
+  const [error, setError] = useState(false);
 
   const handleLogin = () => {
     if (passCode === "1234") {
       setError(false);
-      window.location.href="/menu"
+      router.push("/menu");
     } else {
       setError(true);
     }
@@ -49,7 +51,7 @@ export default function Home() {
         <div className="mt-6">
           <button
             type="button"
-            onClick={handleLogin} // เรียกใช้ฟังก์ชัน handleLogin เมื่อกดปุ่ม
+            onClick={handleLogin}
             className="w-full bg-green-400 hover:bg-green-500 text-white px-5 py-2 rounded-lg focus:outline-none"
           >
             LOGIN
