@@ -34,7 +34,7 @@ export default function Home() {
         <div className="w-full mt-2">
           <input
             className="w-full p-3 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            placeholder="กรุณาระบุรหัส"
+            placeholder="รหัส 1234"
             type="password"
             value={passCode}
             onChange={(e) => setPassCode(e.target.value)} // อัปเดตค่า passCode
