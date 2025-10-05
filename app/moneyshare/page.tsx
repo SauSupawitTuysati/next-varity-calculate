@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import money from "./../../assets/images/money.png";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -36,9 +37,7 @@ export default function Menu() {
   return (
     <>
       <div className="w-10/12 max-w-sm mx-auto mt-10 grid grid-cols-1 gap-6">
-        <div className="flex justify-center">
-          <Image src="/images/money.png" alt="money" width={120} height={120} />
-        </div>
+      <div className="flex justify-center"> <Image src={money} alt="money" width={120} /> </div>
 
         <div className="text-2xl font-bold text-center">MONEY SHARE</div>
 
