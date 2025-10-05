@@ -14,7 +14,7 @@ export default function Menu() {
   const [result, setResult] = useState(null); // State สำหรับเก็บผลลัพธ์
 
   // ฟังก์ชันที่ใช้ในการนำทางไปยังหน้าต่างๆ
-  const handleNavigation = (pathname) => {
+  const handleNavigation = (pathname: string) => {
     router.push(pathname); // นำทางไปยัง path ที่ระบุ
   };
 
