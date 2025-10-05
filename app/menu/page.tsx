@@ -18,7 +18,7 @@ export default function Menu() {
   const router = useRouter();
 
   // ฟังก์ชันที่ใช้ในการนำทางไปยังหน้าต่างๆ
-  const handleNavigation = (pathname) => {
+  const handleNavigation = (pathname: string) => {
     router.push(pathname); // นำทางไปยัง path ที่ระบุ
   };
 
